@@ -174,11 +174,21 @@ th main.lua -h
   --save              file name to save the model []
   --load              file name to load the model []
 ```
-See the [paper](http://arxiv.org/abs/1511.07401) for more details on training. After training, you can see model playing by calling function ```test()``` which will display the game in a browser window.
+See the [paper](http://arxiv.org/abs/1511.07401) for more details on training. 
+<<<<<<< HEAD
+=======
+
+## Testing a trained model
+After training, you can see the model playing by calling function ```test()``` which will display the game in a browser window. But you have to have display package to see the game play. For example, if you saved a trained model using ```--save /tmp/model.t7``` option, then you can load the model using option ```--load /tmp/model.t7 --epochs 0``` and then run ```test()``` command to see it's playing.
+>>>>>>> upstream/master
+
+## Testing a trained model
+
+After training, you can see the model playing by calling function ```test()``` which will display the game in a browser window. But you have to have display package to see the game play. For example, if you saved a trained model using ```--save /tmp/model.t7``` option, then you can load the model using option ```--load /tmp/model.t7 --epochs 0``` and then run ```test()``` command to see it's playing. Before running test(), make sure the localhost server is launched. To display it on http://0.0.0.0:8000/ in your browser, type the following command to launch the server.
+```
+th -ldisplay.start 8000 0.0.0.0
+```
 
 ## Requirements
 The whole code is written in Lua, and requires [Torch7](http://torch.ch/) and [nngraph](http://github.com/torch/nngraph) packages.
-The training uses multi-threading for speed up. Display package is necessary for visualizing the game play, which can be installed by 
-```
-luarocks install display
-```
+The training uses multi-threading for speed up. Display package is necessary for visualizing the game play, which can be installed by following the instructions at https://github.com/szym/display.

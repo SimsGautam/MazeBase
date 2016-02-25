@@ -32,7 +32,7 @@ function GameFactory:__init(opts,vocab,games,helpers)
 end
 
 function GameFactory:init_game(gname)
-     local gopts = self.helpers[gname]:generate_gameopts()
+    local gopts = self.helpers[gname]:generate_gameopts()
     local g = self.games[gname](gopts,self.vocab)
     return g
 end

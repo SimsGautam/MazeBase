@@ -5,6 +5,8 @@
 -- LICENSE file in the root directory of this source tree. An additional grant 
 -- of patent rights can be found in the PATENTS file in the same directory.
 
+g_disp = require('display')
+
 function test()
     local dummy = torch.Tensor(g_opts.nagents, g_opts.hidsz):fill(0.1)
     local batch = batch_init(1)

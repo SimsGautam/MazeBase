@@ -34,6 +34,8 @@ paths.dofile('GotoCardinal.lua')
 paths.dofile('GotoSwitch.lua')
 paths.dofile('SingleGoal.lua')
 paths.dofile('batch.lua')
+paths.dofile('MovingGoals.lua')
+
 
 local function init_game_opts()
     local games = {}
@@ -68,6 +70,8 @@ local function init_game_opts()
     helpers.MultiAgentsStar = MultiAgentsStarHelper
     games.SingleGoal = SingleGoal
     helpers.SingleGoal = OptsHelper
+    games.MovingGoals = MovingGoals
+    helpers.MovingGoals = OptsHelper
     g_factory = GameFactory(g_opts,g_vocab,games,helpers)
     return games, helpers
 end
