@@ -175,12 +175,6 @@ th main.lua -h
   --load              file name to load the model []
 ```
 See the [paper](http://arxiv.org/abs/1511.07401) for more details on training. 
-<<<<<<< HEAD
-=======
-
-## Testing a trained model
-After training, you can see the model playing by calling function ```test()``` which will display the game in a browser window. But you have to have display package to see the game play. For example, if you saved a trained model using ```--save /tmp/model.t7``` option, then you can load the model using option ```--load /tmp/model.t7 --epochs 0``` and then run ```test()``` command to see it's playing.
->>>>>>> upstream/master
 
 ## Testing a trained model
 
